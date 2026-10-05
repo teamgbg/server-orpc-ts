@@ -2,8 +2,6 @@
  * @system mcp-infrastructure
  * @status handwritten
  * @edit edit directly
- *
- * Registers the browser ORPC client (called once at boot).
  */
 
 import { state } from "./state";

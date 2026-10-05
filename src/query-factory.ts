@@ -2,16 +2,11 @@
  * @system mcp-infrastructure
  * @status handwritten
  * @edit edit directly
- *
- * Factory creating lazy-loaded TanStack Query utilities from an ORPC client.
- * Wraps @orpc/tanstack-query with a proxy that defers client initialization
- * until first property access, avoiding circular dependency issues at boot.
  */
 
 import { createTanstackQueryUtils, type RouterUtils } from "@orpc/tanstack-query";
 import type { NestedClient } from "@orpc/client";
 
-/** Create lazy-loaded TanStack Query utils from an ORPC client */
 export function createOrpcQueryUtils(
 	client: NestedClient<any>,
 ): RouterUtils<NestedClient<any>> {

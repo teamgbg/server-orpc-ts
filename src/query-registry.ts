@@ -2,26 +2,16 @@
  * @system mcp-infrastructure
  * @status handwritten
  * @edit edit directly
- *
- * Central registry for TanStack Query ORPC utilities, consumed by packages that
- * need typed query options without importing from the app layer. Implements a
- * lazy proxy that throws until the query utils are registered at boot.
  */
 
 type OrpcQueryUtils = Record<string, unknown>;
 
 let _orpc: OrpcQueryUtils | null = null;
 
-/** Register the TanStack Query ORPC utils (called once at boot).
- *  Accepts `unknown` and narrows at the store: the real value is an orpc
- *  RouterUtils, a generic mapped type with no implicit string index signature,
- *  so it is not assignable to the loose Record view consumers index through.
- *  Same boundary cast as query-factory's lazy proxy. */
 export function registerOrpcQuery(orpc: unknown): void {
 	_orpc = orpc as OrpcQueryUtils;
 }
 
-/** Lazy proxy — safe to use at module scope, resolves on first access */
 export const orpc: OrpcQueryUtils = new Proxy({} as OrpcQueryUtils, {
 	get(_, prop, receiver) {
 		if (!_orpc) {

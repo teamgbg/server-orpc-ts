@@ -2,8 +2,6 @@
  * @system mcp-infrastructure
  * @status handwritten
  * @edit edit directly
- *
- * Lazy proxy — safe at module scope, resolves on first property access.
  */
 
 import { state } from "./state";

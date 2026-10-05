@@ -2,12 +2,6 @@
  * @system orpc
  * @status handwritten
  * @edit edit directly
- *
- * configured-primitives template (per principles/coding-philosophy.md). The
- * orpc package never imports @teamscala/auth, @teamscala/logger,
- * or @teamscala/db directly — instead it accepts injected providers via
- * configure() at boot. Bootloader injection lives in service-runtime per
- * bootloader-injection-contract.
  */
 
 // 1. Locally-defined contracts — NEVER import from upstream packages.
@@ -50,19 +44,10 @@ export interface InjectedDb8 {
 	orm: Record<string, Record<string, unknown>>;
 }
 
-/**
- * The durable record one thrown procedure produces, shaped by buildErrorReport
- * (the platform's ONE error classifier: errorId, error class, normalized code,
- * stack head). The recorder is injected by the boot layer — the runtime tier
- * owns the @teamscala/event-log edge, which a primitives-tier package cannot
- * import (vertical-dependency-only).
- */
 export interface ProcedureErrorRecord {
 	procedure: string;
 	errorId: string;
-	/** The error class (err.name), e.g. ReferenceError. */
 	errorName: string;
-	/** Normalized code from the rule engine (e.g. UNKNOWN). */
 	code: string;
 	message: string;
 	transient: boolean;

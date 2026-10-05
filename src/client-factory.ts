@@ -2,10 +2,6 @@
  * @system mcp-infrastructure
  * @status handwritten
  * @edit edit directly
- *
- * Browser ORPC client factory for scala-hub frontend. Creates an HTTP client that
- * injects the organisation ID from the URL path into X-Organisation-Id headers,
- * with SSR-safe proxying for TanStack Router loaders and client components.
  */
 
 import { createORPCClient, type NestedClient } from "@orpc/client";
@@ -104,7 +100,6 @@ function getClient(): NestedClient<any> {
 	);
 }
 
-/** Create a lazy-evaluated ORPC client proxy */
 export function createBrowserOrpcClient(): TypedORPCClient {
 	// The proxy forwards every access to the real ORPC client (which carries the
 	// generated router shape + the runtime-registered `fn` router), so at runtime
