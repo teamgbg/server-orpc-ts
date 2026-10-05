@@ -1,6 +1,6 @@
 /**
  * @system orpc
- * @status handwritten — none derivable: a row argument is JSON and an oRPC procedure carries valibot schemas, which have no JSON spelling — searched the function_call and fs_flow row arms (args, $error, $fn, fixtures.stubs) and none of them can construct a router
+ * @status handwritten
  * @edit edit directly
  *
  * THE ROUTER THE OPENAPI CONTRACT ROWS PROJECT, and the projection itself

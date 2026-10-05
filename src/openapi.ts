@@ -1,6 +1,6 @@
 /**
  * @system orpc
- * @status handwritten — none derivable: the supplier's OpenAPIGenerator does the projection and no row or output supplies the wiring — searched the 405 codegen_output rows and the package catalogue, and none projects a live oRPC router into a document
+ * @status handwritten
  * @edit edit directly
  *
  * THE OpenAPI contract for a service's composed oRPC router — generated from
