@@ -192,6 +192,61 @@ describe("avatar_recordings", () => {
 	test.skip("no Json columns declared for this model", () => undefined);
 });
 
+describe("better_auth_account", () => {
+	test("findById returns null on a miss instead of throwing", async () => {
+		const model = recordingModel(null);
+		const result = await model.findFirst({ where: { id: "missing" } });
+		expect(result).toBeNull();
+		expect(model.calls.at(0)?.op).toBe("findFirst");
+	});
+
+	test.skip("no Json columns declared for this model", () => undefined);
+});
+
+describe("better_auth_invitation", () => {
+	test("findById returns null on a miss instead of throwing", async () => {
+		const model = recordingModel(null);
+		const result = await model.findFirst({ where: { id: "missing" } });
+		expect(result).toBeNull();
+		expect(model.calls.at(0)?.op).toBe("findFirst");
+	});
+
+	test.skip("no Json columns declared for this model", () => undefined);
+});
+
+describe("better_auth_member", () => {
+	test("findById returns null on a miss instead of throwing", async () => {
+		const model = recordingModel(null);
+		const result = await model.findFirst({ where: { id: "missing" } });
+		expect(result).toBeNull();
+		expect(model.calls.at(0)?.op).toBe("findFirst");
+	});
+
+	test.skip("no Json columns declared for this model", () => undefined);
+});
+
+describe("better_auth_session", () => {
+	test("findById returns null on a miss instead of throwing", async () => {
+		const model = recordingModel(null);
+		const result = await model.findFirst({ where: { id: "missing" } });
+		expect(result).toBeNull();
+		expect(model.calls.at(0)?.op).toBe("findFirst");
+	});
+
+	test.skip("no Json columns declared for this model", () => undefined);
+});
+
+describe("better_auth_verification", () => {
+	test("findById returns null on a miss instead of throwing", async () => {
+		const model = recordingModel(null);
+		const result = await model.findFirst({ where: { id: "missing" } });
+		expect(result).toBeNull();
+		expect(model.calls.at(0)?.op).toBe("findFirst");
+	});
+
+	test.skip("no Json columns declared for this model", () => undefined);
+});
+
 describe("billing_accounts", () => {
 	test("findById returns null on a miss instead of throwing", async () => {
 		const model = recordingModel(null);
@@ -336,17 +391,6 @@ describe("builda_media_projects", () => {
 });
 
 describe("builda_messages", () => {
-	test("findById returns null on a miss instead of throwing", async () => {
-		const model = recordingModel(null);
-		const result = await model.findFirst({ where: { id: "missing" } });
-		expect(result).toBeNull();
-		expect(model.calls.at(0)?.op).toBe("findFirst");
-	});
-
-	test.skip("no Json columns declared for this model", () => undefined);
-});
-
-describe("builda_page_history", () => {
 	test("findById returns null on a miss instead of throwing", async () => {
 		const model = recordingModel(null);
 		const result = await model.findFirst({ where: { id: "missing" } });
@@ -1116,17 +1160,6 @@ describe("interviewer_ai_interviews", () => {
 	test.skip("no Json columns declared for this model", () => undefined);
 });
 
-describe("invitation", () => {
-	test("findById returns null on a miss instead of throwing", async () => {
-		const model = recordingModel(null);
-		const result = await model.findFirst({ where: { id: "missing" } });
-		expect(result).toBeNull();
-		expect(model.calls.at(0)?.op).toBe("findFirst");
-	});
-
-	test.skip("no Json columns declared for this model", () => undefined);
-});
-
 describe("marketa_audience_leads", () => {
 	test("findById returns null on a miss instead of throwing", async () => {
 		const model = recordingModel(null);
@@ -1787,17 +1820,6 @@ describe("schema_changes_log", () => {
 	test.skip("no Json columns declared for this model", () => undefined);
 });
 
-describe("session", () => {
-	test("findById returns null on a miss instead of throwing", async () => {
-		const model = recordingModel(null);
-		const result = await model.findFirst({ where: { id: "missing" } });
-		expect(result).toBeNull();
-		expect(model.calls.at(0)?.op).toBe("findFirst");
-	});
-
-	test.skip("no Json columns declared for this model", () => undefined);
-});
-
 describe("session_picker_option", () => {
 	test("findById returns null on a miss instead of throwing", async () => {
 		const model = recordingModel(null);
@@ -2107,17 +2129,6 @@ describe("v_websites_with_active_page_counts", () => {
 });
 
 describe("values", () => {
-	test("findById returns null on a miss instead of throwing", async () => {
-		const model = recordingModel(null);
-		const result = await model.findFirst({ where: { id: "missing" } });
-		expect(result).toBeNull();
-		expect(model.calls.at(0)?.op).toBe("findFirst");
-	});
-
-	test.skip("no Json columns declared for this model", () => undefined);
-});
-
-describe("verification", () => {
 	test("findById returns null on a miss instead of throwing", async () => {
 		const model = recordingModel(null);
 		const result = await model.findFirst({ where: { id: "missing" } });
