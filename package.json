@@ -29,13 +29,15 @@
 		"@teamscala/hono-boundary": "*",
 		"@teamscala/logger": "*",
 		"@teamscala/os": "*",
+		"hono": "*",
 		"valibot": "*"
 	},
 	"devDependencies": {
 		"bun-types": "*",
 		"@happy-dom/global-registrator": "*",
 		"@testing-library/react": "*",
-		"hono": "*"
+		"react": "*",
+		"react-dom": "*"
 	},
 	"exports": {
 		"./app-router": "./src/app-router.ts",
