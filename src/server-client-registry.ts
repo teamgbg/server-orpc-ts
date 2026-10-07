@@ -31,7 +31,7 @@ export interface ServerClientUserContext {
 import type { AnyRouter, RouterClient } from "@orpc/server";
 import type {
 	TypedORPCClient,
-} from "./client-types.ts";
+} from "@teamscala/orpc-client/client-types";
 
 /**
  * Typed ORPC server client. Instantiate with a service router for full
