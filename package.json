@@ -28,7 +28,8 @@
 		"@teamscala/db": "*",
 		"@teamscala/hono-boundary": "*",
 		"@teamscala/logger": "*",
-		"@teamscala/os": "*"
+		"@teamscala/os": "*",
+		"valibot": "*"
 	},
 	"devDependencies": {
 		"bun-types": "*",
@@ -63,6 +64,8 @@
 		"./middleware/types.ts": "./src/middleware/types.ts",
 		"./openapi": "./src/openapi.ts",
 		"./openapi.ts": "./src/openapi.ts",
+		"./openapi-contract-fixture": "./src/openapi-contract-fixture.ts",
+		"./openapi-contract-fixture.ts": "./src/openapi-contract-fixture.ts",
 		"./procedure-error-report": "./src/procedure-error-report.ts",
 		"./procedure-error-report.ts": "./src/procedure-error-report.ts",
 		"./query-factory": "./src/query-factory.ts",
